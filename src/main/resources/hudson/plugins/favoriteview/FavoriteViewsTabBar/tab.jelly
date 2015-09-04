@@ -37,12 +37,7 @@ THE SOFTWARE.
           <j:if test="${h.anonymous}">
             ${name}
           </j:if>
-          <j:if test="${!h.anonymous &amp;&amp; favorite}">
-            <a href="${app.rootUrl}${it.descriptor.descriptorUrl}/toggleFavorite?favorite=false&amp;view=${it.getViewId(v)}"><img src="${rootURL}/images/16x16/star-gold.gif"/> ${name}</a>
-          </j:if>
-          <j:if test="${!h.anonymous &amp;&amp; !favorite}">
-              <a href="${app.rootUrl}${it.descriptor.descriptorUrl}/toggleFavorite?favorite=true&amp;view=${it.getViewId(v)}"><img src="${rootURL}/images/16x16/star.gif"/> ${name}</a>             
-          </j:if>
+          ${name}
           </td>
           <j:set scope="parent" var="activeIndex" value="${tabIndex}" />
         </j:when>
